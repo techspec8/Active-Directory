@@ -23,11 +23,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Create Resources in Azure
 - Configure Network Interface (NIC) 
 - Check Connectivity between VM's
-- Step 4
+- Enable ICMPv4 on Server
+- 
 
 <h2>Deployment and Configuration Steps</h2>
 
-<p>Start by creating a Resource Group in Azure with a Domain Controller VM (Windows Server 2022) named “DC-1”, then a client VM using (Windows 10) named “Client-1”. Be sure to use the same Resource Group and Vnet that was created in DC-1.
+<p>Start by creating a Resource Group in Azure with a Domain Controller VM (Windows Server 2022) named “DC-1”, then a client VM using (Windows 10) named “Client-1”. Be sure you're using the same Vnet/Subnet that was created in DC-1.
 <p>
 <img src= https://i.imgur.com/KZXdOjx.png
 </p>
@@ -48,9 +49,20 @@ Configure Domain Controller’s NIC Private IP address from Dynamic to Static.
 <br />
 
 <p>
-Check connectivity between the Client and Domain Controller
+Check connectivity between the Client and Domain Controller. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with a perpetual ping -t <ip address> observe that your request timed out and the connection failed.  
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src= https://i.imgur.com/wbdOrHN.png
+</p>
+<br />
+
+<p>
+Remotely log into Domain Controller to enable ICMPv4 in Windows Defender Firewall with Advanced Security; Inbound Rules (filter Protocol for ICMPv4, the protocol Ping uses);Enable Core Networking Diagnostics Echo; Observe Connectivity from Client Desktop  
+</p>
+<p>
+<img src= https://i.imgur.com/P9wpgxA.png
+</p>
+<p>
+<img src= https://i.imgur.com/LNnurWM.png
 </p>
 <br />

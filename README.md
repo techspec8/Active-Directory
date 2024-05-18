@@ -26,6 +26,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Enable ICMPv4 on Server
 - Configure and Install Active Directory
 - Create an Admin and Normal User Accounts in AD
+- Connect Client-1 to DNS Server
+- Join Client-1 to mydomain.com
+- Setup Remote Users
 
 
 <h2>Deployment and Configuration Steps</h2>
@@ -104,7 +107,33 @@ In Active Directory Users and Computers, create two new Organizational Units und
 <p>
 <img src= https://i.imgur.com/kw6rDYC.png
 </p>
+<br/>
+
 <p>
-<img src= 
+Change Client-1’s NIC DNS settings to DC’s Private IP from Azure. Open Client-1; Network Settings; Network Interface; DNS Servers: select Custom; insert DC-1's Private IP and Save; Restart Client-1. Log back into Client-1's Remote Desktop and confirm connection to DC-1's Private IP under DNS Server using Command Prompt ipconfig /all. 
+</p>
+<p>
+<img src= https://i.imgur.com/4Fdhhhy.png
+</p>
+<p> 
+<img src = https://i.imgur.com/ZEu1MGq.png 
+</p>
+<p> 
+<img src = https://i.imgur.com/ZEu1MGq.png 
 </p>
 <br/>
+
+<p>Join Client-1 to your domain (mydomain.com). Right click start menu; System; Rename this PC (Advanced); Change; Select Domain and enter mydomain.com; enter admin's credentials. Client-1 will be prompted to restart.
+</p>
+<p> 
+<img src = https://i.imgur.com/mn2ztCB.png
+</p>
+<p> 
+<img src = https://i.imgur.com/5lAVMJO.png <p><img src = https://i.imgur.com/tmEStI6.png
+</p>
+<br />
+<p>To set up remote users, log into Client-1 as Admin and open System Properties from start menu. Click “Select users that can remotely access this PC”. Click “Add”, then select the security groups you want to add.
+</p>
+<p> 
+<img src = https://i.imgur.com/fSkjG94.png <p><img src= https://i.imgur.com/kjIk9TT.png
+</p>

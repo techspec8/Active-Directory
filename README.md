@@ -23,9 +23,9 @@
 - Create Domain Controller and Client Virtual Machines in Azure
 - Configure Network Interface (NIC) 
 - Check Connectivity between VM's
-- Enable ICMPv4 on Server
+- Enable ICMPv4 traffic from Windows Firewall 
 - Configure and Install Active Directory
-- Create User Accounts in AD
+- Create Users and Security Groups in Acive Directory
 - Connect Client-1 to DNS Server
 - Join Client-1 to mydomain.com
 - Setup Remote User Access
@@ -66,7 +66,7 @@ Check connectivity between the Client and Domain Controller. Login to Client-1 w
 <br />
   
 <b>
-Remotely log into Domain Controller to enable ICMPv4 in Windows Defender Firewall with Advanced Security; Inbound Rules (filter Protocol for ICMPv4, the protocol Ping uses);Enable Core Networking Diagnostics Echo; Observe Successful Connectivity from Client Desktop  
+Remotely log into Domain Controller to enable ICMPv4 in Windows Defender Firewall with Advanced Security; Inbound Rules (filter Protocol for ICMPv4, the protocol Ping uses);Enable Core Networking Diagnostics Echo; observe the successful connectivity from client desktop.  
 </b>
 <p>
 <img src= https://i.imgur.com/P9wpgxA.png

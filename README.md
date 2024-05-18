@@ -24,7 +24,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Configure Network Interface (NIC) 
 - Check Connectivity between VM's
 - Enable ICMPv4 on Server
-- 
+- Install Active Directory
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -57,7 +57,7 @@ Check connectivity between the Client and Domain Controller. Login to Client-1 w
 <br />
 
 <p>
-Remotely log into Domain Controller to enable ICMPv4 in Windows Defender Firewall with Advanced Security; Inbound Rules (filter Protocol for ICMPv4, the protocol Ping uses);Enable Core Networking Diagnostics Echo; Observe Connectivity from Client Desktop  
+Remotely log into Domain Controller to enable ICMPv4 in Windows Defender Firewall with Advanced Security; Inbound Rules (filter Protocol for ICMPv4, the protocol Ping uses);Enable Core Networking Diagnostics Echo; Observe Successful Connectivity from Client Desktop  
 </p>
 <p>
 <img src= https://i.imgur.com/P9wpgxA.png
@@ -65,4 +65,44 @@ Remotely log into Domain Controller to enable ICMPv4 in Windows Defender Firewal
 <p>
 <img src= https://i.imgur.com/LNnurWM.png
 </p>
-<br />
+<p>
+<img src= https://i.imgur.com/5BuoQae.png
+</p>
+<br/>
+
+<p>
+Install Active Directory on the Server Manager Dashboard from Add Roles and Features; setup a new forest as mydomain.com; restart and log back into DC-1 as user: mydomain.com\labuser; 
+</p>
+<p>
+<img src= https://i.imgur.com/I5Ii8dQ.png
+</p>
+<p>
+<img src= https://i.imgur.com/FP1YnxS.png
+</p>
+<p>
+<img src= https://i.imgur.com/WhHpZ5A.png
+</p>
+<p>
+<img src= https://i.imgur.com/quXQbsF.png
+</p>
+<br/>
+
+<p>
+Install Active Directory on the Server Manager Dashboard from Add Roles and Features; setup a new forest as mydomain.com; restart and log back into DC-1 as user: mydomain.com\labuser; 
+</p>
+<p>
+<img src= https://i.imgur.com/I5Ii8dQ.png
+</p>
+<p>
+<img src= 
+</p>
+<p>
+<img src= 
+</p>
+<p>
+<img src= 
+</p>
+<p>
+<img src= 
+</p>
+<br/>

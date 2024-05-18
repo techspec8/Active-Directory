@@ -24,7 +24,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Configure Network Interface (NIC) 
 - Check Connectivity between VM's
 - Enable ICMPv4 on Server
-- Install Active Directory
+- Configure and Install Active Directory
+- Create an Admin and Normal User Accounts in AD
+
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -71,7 +73,7 @@ Remotely log into Domain Controller to enable ICMPv4 in Windows Defender Firewal
 <br/>
 
 <p>
-Install Active Directory on the Server Manager Dashboard from Add Roles and Features; setup a new forest as mydomain.com; restart and log back into DC-1 as user: mydomain.com\labuser; 
+Install Active Directory on the Server Manager Dashboard from Add Roles and Features; setup a new forest as mydomain.com; restart and log back into DC-1 as user: mydomain.com\labuser
 </p>
 <p>
 <img src= https://i.imgur.com/I5Ii8dQ.png
@@ -88,19 +90,19 @@ Install Active Directory on the Server Manager Dashboard from Add Roles and Feat
 <br/>
 
 <p>
-Install Active Directory on the Server Manager Dashboard from Add Roles and Features; setup a new forest as mydomain.com; restart and log back into DC-1 as user: mydomain.com\labuser; 
+In Active Directory Users and Computers, create two new Organizational Units under mydomain.com, EMPLOYEES, and ADMINS. Create a new user jane_admin in the ADMINS Organizational Unit. Next, add jane_admin to the “Domain Admins” Security Group. Log out and back in as jane_admin. 
 </p>
 <p>
-<img src= https://i.imgur.com/I5Ii8dQ.png
+<img src= https://i.imgur.com/QmTD3gb.png
 </p>
 <p>
-<img src= 
+<img src= https://i.imgur.com/CIrE301.png
 </p>
 <p>
-<img src= 
+<img src= https://i.imgur.com/UfzHn0p.png
 </p>
 <p>
-<img src= 
+<img src= https://i.imgur.com/kw6rDYC.png
 </p>
 <p>
 <img src= 
